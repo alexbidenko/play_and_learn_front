@@ -9,10 +9,10 @@ import statistic from "./statistic.module";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-    modules: {
-        auth,
-        redaction,
-        game,
-        statistic
-    }
+  modules: {
+    auth,
+    redaction,
+    game,
+    statistic
+  }
 });

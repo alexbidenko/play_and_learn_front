@@ -1,18 +1,18 @@
 <template>
-    <v-sparkline
-            :value="values"
-            :gradient="gradient"
-            :smooth="radius || false"
-            :padding="padding"
-            :line-width="width"
-            :stroke-linecap="lineCap"
-            :gradient-direction="gradientDirection"
-            :type="type"
-            :auto-line-width="autoLineWidth"
-            auto-draw
-            :show-labels="true"
-            :labels="labels"
-    ></v-sparkline>
+  <v-sparkline
+    :value="values"
+    :gradient="gradient"
+    :smooth="radius || false"
+    :padding="padding"
+    :line-width="width"
+    :stroke-linecap="lineCap"
+    :gradient-direction="gradientDirection"
+    :type="type"
+    :auto-line-width="autoLineWidth"
+    auto-draw
+    :show-labels="true"
+    :labels="labels"
+  ></v-sparkline>
 </template>
 
 <script>

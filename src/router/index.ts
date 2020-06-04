@@ -11,43 +11,43 @@ import Statistic from '@/views/Statistic.vue';
 Vue.use(Router);
 
 export default new Router({
-    mode: 'history',
-    routes: [
+  mode: 'history',
+  routes: [
+    {
+      path: "/",
+      component: Home,
+      children: [
         {
-            path: "/",
-            component: Home,
-            children: [
-                {
-                    path: "",
-                    name: "home",
-                    component: Game
-                },
-                {
-                    path: "login",
-                    name: "login",
-                    component: Login
-                },
-                {
-                    path: "registration",
-                    name: "registration",
-                    component: Registration
-                },
-                {
-                    path: "cabinet",
-                    name: "cabinet",
-                    component: Cabinet
-                },
-                {
-                    path: "redaction",
-                    name: "redaction",
-                    component: Redaction
-                },
-                {
-                    path: "statistic",
-                    name: "statistic",
-                    component: Statistic
-                }
-            ]
+          path: "",
+          name: "home",
+          component: Game
+        },
+        {
+          path: "login",
+          name: "login",
+          component: Login
+        },
+        {
+          path: "registration",
+          name: "registration",
+          component: Registration
+        },
+        {
+          path: "cabinet",
+          name: "cabinet",
+          component: Cabinet
+        },
+        {
+          path: "redaction",
+          name: "redaction",
+          component: Redaction
+        },
+        {
+          path: "statistic",
+          name: "statistic",
+          component: Statistic
         }
-    ]
+      ]
+    }
+  ]
 });
