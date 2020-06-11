@@ -26,5 +26,7 @@ jobs:
         run: |
           npm run build
       - name: Deploy
-        run: rsync -e 'sshpass -p ${{secrets.SSH_PASS}} ssh' -avzP --exclude={'web.config','storage','redirect.html','index.php','.htaccess'} --delete-after dist/ ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:/home/c/cp36696/play-and-learn/public
+        run: |
+          rsync -e 'sshpass -p ${{secrets.SSH_PASS}} ssh' -avzP --exclude={'web.config','storage','redirect.html','index.php','.htaccess'} --delete-after dist/ ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:/home/c/cp36696/play-and-learn/public
+          sshpass -p ${{secrets.SSH_PASS}} ssh ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}} 'cp /home/c/cp36696/play-and-learn/public/index.html /home/c/cp36696/play-and-learn/resources/views/index.blade.php'
         shell: bash
